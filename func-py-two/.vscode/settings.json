@@ -6,9 +6,16 @@
     },
     "azureFunctions.deploySubpath": ".",
     "azureFunctions.scmDoBuildDuringDeployment": true,
-    "python.defaultInterpreterPath": "./.venv/scripts/python.exe",
+    "python.defaultInterpreterPath": "./.venv/bin/python",
     "azureFunctions.pythonVenv": ".venv",
     "azureFunctions.projectLanguage": "Python",
+    "python.autoComplete.extraPaths": [
+        "../py_common"
+    ],
+    "python.analysis.extraPaths": [
+        "../py_common"
+    ],
+    "python.envFile": "${workspaceFolder}/.env",
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,

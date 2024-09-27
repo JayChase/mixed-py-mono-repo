@@ -20,6 +20,12 @@
 			"linux": {
 				"command": "python  -m pip install -r requirements.txt"
 			},
+			"options": {
+				"env": {
+					"PYTHONPATH": "../py_common",
+					"defaultInterpreterPath": "./.venv/Scripts/python.exe"
+				}
+			},
 			"problemMatcher": []
 		}
 	]
