@@ -1,0 +1,8 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#550850",
+        "titleBar.activeBackground": "#770C71",
+        "titleBar.activeForeground": "#FFFAFE"
+    },
+    "azureFunctions.projectSubpath": "func-py-one"
+}

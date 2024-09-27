@@ -2,6 +2,7 @@ import azure.functions as func
 import datetime
 import json
 import logging
+from py_common.db_client import DbClient
 
 app = func.FunctionApp()
 
@@ -9,6 +10,10 @@ app = func.FunctionApp()
 @app.route(route="MyHttpTrigger", auth_level=func.AuthLevel.ANONYMOUS)
 def MyHttpTrigger(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Python HTTP trigger function processed a request.")
+
+    db_client = DbClient()
+
+    test = db_client.query()
 
     name = req.params.get("name")
     if not name:
