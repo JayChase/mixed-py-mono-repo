@@ -12,12 +12,8 @@ def MyHttpTrigger(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Python HTTP trigger function processed a request.")
 
     db_client = DbClient()
+    name = db_client.query()
 
-    test = db_client.query()
-
-    print(test)
-
-    name = req.params.get("name")
     if not name:
         try:
             req_body = req.get_json()
