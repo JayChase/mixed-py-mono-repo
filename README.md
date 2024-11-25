@@ -13,6 +13,9 @@
 - [Azurite](https://marketplace.visualstudio.com/items?itemName=Azurite.azurite) 
 - [Python](https://www.python.org/downloads/)
 
+
+## 
+
 ## References
 
 - [Python Azure Function Apps](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-python?tabs=windows%2Cbash%2Cazure-cli%2Cbrowser)
