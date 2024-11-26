@@ -1,0 +1,68 @@
+{
+	"name": "func-py-one codespace",
+	"dockerFile": "Dockerfile",
+	"hostRequirements": {
+		"cpus": 2
+	},
+	"forwardPorts": [
+		7071
+	],
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/func-py-one",
+	"customizations": {
+		"codespaces": {
+			"openFiles": [
+				"README.md"
+			]
+		},
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/home/vscode/venv/bin/python"
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"shd101wyy.markdown-preview-enhanced",
+				"ms-vscode.azure-account",
+				"GitHub.vscode-github-actions",
+				"GitHub.copilot",
+				"azurite.azurite",
+				"ms-azuretools.vscode-azureresourcegroups",
+				"ms-azuretools.vscode-azurefunctions",
+				"ms-azuretools.vscode-docker",
+				"humao.rest-client",
+				"ms-azuretools.vscode-bicep",
+				"ms-python.python",
+				"eamodio.gitlens",
+				"ms-python.debugpy",
+				"ms-python.black-formatter",
+				"ms-python.vscode-pylance",
+				"ms-python.pylint",
+				"tamasfe.even-better-toml",
+				"charliermarsh.ruff",
+				"zoma.vscode-auto-open-workspace"
+			]
+		}
+	},
+	"initializeCommand": "",
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "sudo npm install -g azurite",
+	"postStartCommand": "virtualenv .venv",
+	"postAttachCommand": "",
+	"remoteUser": "root",
+	"runArgs": [
+		"--privileged",
+		"--cap-add=NET_ADMIN",
+		"--cap-add=NET_RAW",
+		"--device=/dev/net/tun"
+	],
+	"features": {
+		"ghcr.io/devcontainers/features/azure-cli:1": {
+			"installUsingPython": true,
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {
+			"installDirectlyFromGitHubRelease": true,
+			"version": "latest"
+		}
+	}
+}

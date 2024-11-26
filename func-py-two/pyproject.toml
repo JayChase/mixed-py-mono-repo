@@ -1,0 +1,19 @@
+[tool.pytest.ini_options]
+addopts = [
+    '-ra --omit="*/test*" --cov ==cov-fail-under=80 ——cov—report term—missing',
+]
+
+[tool.pylint]
+ignore-patterns = ["test_.*?py"]
+msg-template = '{path}:{line}:{column}: {msg_id}: {msg} ({symbol})'
+fail-under = 3
+
+[tool.pyright]
+typeCheckingMode = "standard"
+autoSearchPaths = true
+extraPaths = ["../py_common"]
+include = [".", "../py_common"]
+exclude = ["tests", ".venv"]
+
+[tool.black]
+line-length = 79

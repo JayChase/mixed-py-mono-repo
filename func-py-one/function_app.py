@@ -1,8 +1,8 @@
-import azure.functions as func
-import datetime
-import json
 import logging
-from db_client import DbClient
+
+import azure.functions as func
+
+# from db_client import DbClient
 
 app = func.FunctionApp()
 

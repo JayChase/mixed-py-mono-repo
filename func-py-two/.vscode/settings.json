@@ -9,11 +9,12 @@
     "python.defaultInterpreterPath": "./.venv/bin/python",
     "azureFunctions.pythonVenv": ".venv",
     "azureFunctions.projectLanguage": "Python",
-    "python.autoComplete.extraPaths": [
-        "../py_common"
+    "python.analysis.include": [
+        "${workspaceFolder}",
+        "../py_common",
     ],
     "python.analysis.extraPaths": [
-        "../py_common"
+        "../py_common",
     ],
     "python.envFile": "${workspaceFolder}/.env",
     "[python]": {
@@ -23,7 +24,6 @@
             "source.organizeImports.ruff": "explicit"
         }
     },
-    "python.analysis.typeCheckingMode": "strict",
     "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",
     "azureFunctions.projectLanguageModel": 2,
